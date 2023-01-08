@@ -2,9 +2,11 @@ require('dotenv').config();
 require('./db-connection');
 const express = require("express");
 const bodyParser = require("body-parser");
+var cors = require('cors');
 const PORT = process.env.PORT || 5050;
 
 const app = express();
+app.use(cors());
 
 const projectsRouter = require('./routes/projects');
 const tasksRouter = require('./routes/tasks');
