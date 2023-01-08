@@ -6,7 +6,7 @@ const schema = new mongoose.Schema({
     projectId: {type: String, required: true},
     color: {type: String, required: true},
     time: {type: String, required: true},
-    date: {type: String, required: true, default: Date.now()}
+    date: {type: String, required: true}
 })
 
 const Task = mongoose.model('Task', schema);
